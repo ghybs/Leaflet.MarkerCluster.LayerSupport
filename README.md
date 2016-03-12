@@ -35,13 +35,13 @@ you might be interested in this more simple plugin:
 ## Usage instructions
 
 ### Quick Guide
-HTML:
+**HTML:**
 ```html
 <!-- After Leaflet and Leaflet.markercluster scripts -->
 <script src="leaflet.markercluster.layersupport-src.js"></script>
 ```
 
-JavaScript:
+**JavaScript:**
 ```javascript
 var map = L.map("map"),
     mcgLayerSupportGroup = L.markerClusterGroup.layerSupport(options),
@@ -60,8 +60,20 @@ with any plugin that adds to / removes markers from map (e.g. [LeafletSlider](ht
 
 
 ### Installing the sub-plugin
-Simply add the "leaflet.markercluster.layersupport-src.js" script file to your page after
+
+#### Local copy
+1. <a href="https://raw.githubusercontent.com/ghybs/Leaflet.MarkerCluster.LayerSupport/master/leaflet.markercluster.layersupport-src.js" download="leaflet.markercluster.layersupport-src.js">Download</a> the "leaflet.markercluster.layersupport-src.js" file.
+2. Place the file alongside your page.
+3. Add the `script` tag (see [Quick Guide > HTML](#quick-guide)) to your page after
 Leaflet and Leaflet.markercluster scripts.
+
+#### CDN
+You can alternatively use the free [RawGit](https://rawgit.com/) CDN service, but please note that there are [no uptime or support guarantees](https://rawgit.com/faq#no-uptime-guarantee).
+
+```html
+<!-- After Leaflet and Leaflet.markercluster scripts -->
+<script src="https://cdn.rawgit.com/ghybs/Leaflet.MarkerCluster.LayerSupport/3d4c4f24a008d6983a8f98b1c823f9a05ad62f80/leaflet.markercluster.layersupport-src.js"></script>
+```
 
 
 ### Creation
