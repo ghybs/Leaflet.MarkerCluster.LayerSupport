@@ -1,0 +1,22 @@
+{
+  "name": "leaflet.markercluster.layersupport",
+  "version": "0.1.0",
+  "description": "Sub-plugin for Leaflet.markercluster. Brings compatibility with L.Control.Layers",
+  "main": "leaflet.markercluster.layersupport-src.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rey-awesense/Leaflet.MarkerCluster.LayerSupport.git"
+  },
+  "author": "https://github.com/ghybs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rey-awesense/Leaflet.MarkerCluster.LayerSupport/issues"
+  },
+  "homepage": "https://github.com/rey-awesense/Leaflet.MarkerCluster.LayerSupport#readme"
+}
