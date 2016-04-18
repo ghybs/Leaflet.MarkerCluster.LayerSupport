@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/rey-awesense/Leaflet.MarkerCluster.LayerSupport/issues"
   },
-  "homepage": "https://github.com/rey-awesense/Leaflet.MarkerCluster.LayerSupport#readme"
+  "homepage": "https://github.com/rey-awesense/Leaflet.MarkerCluster.LayerSupport#readme",
+  "dependencies": {
+    "leaflet": "^0.7.7",
+    "leaflet.markercluster": "^0.4.0"
+  }
 }
