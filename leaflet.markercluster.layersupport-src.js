@@ -58,10 +58,10 @@
 			// Replace the MCG internal featureGroup's so that they directly
 			// access the map add/removal methods, bypassing the switch agent.
 			this._featureGroup = new _ByPassingFeatureGroup();
-			this._featureGroup.on(EVENTS, this._propagateEvent, this);
+			this._featureGroup.addEventParent(this);
 
 			this._nonPointGroup = new _ByPassingFeatureGroup();
-			this._nonPointGroup.on(EVENTS, this._propagateEvent, this);
+			this._nonPointGroup.addEventParent(this);
 
 			// Keep track of what should be "represented" on map (can be clustered).
 			this._layers = {};
@@ -460,9 +460,7 @@
 				return this;
 			}
 
-			if ('on' in layer) {
-				layer.on(EVENTS, this._propagateEvent, this);
-			}
+			layer.addEventParent(this);
 
 			var id = L.stamp(layer);
 
