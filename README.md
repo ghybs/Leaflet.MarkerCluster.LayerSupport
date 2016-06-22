@@ -20,11 +20,10 @@ you might be interested in this more simple plugin:
 [Leaflet.FeatureGroup.SubGroup](https://github.com/ghybs/Leaflet.FeatureGroup.SubGroup)._
 
 
-
 ## Requirements
-- Leaflet stable (0.7.x)
-- Leaflet.markercluster stable (0.4.x)
-
+- Requires Leaflet 1.0.0-rc.1
+- For Leaflet 0.7.x use the Leaflet stable (0.7.x)
+- [Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster) plugin
 
 
 ## Demos
