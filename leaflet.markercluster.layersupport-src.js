@@ -589,7 +589,7 @@
 
 	// Supply with a factory for consistency with Leaflet.
 	L.markerClusterGroup.layerSupport = function (options) {
-		return new L.MarkerClusterGroup.LayerSupport(options);
+		return new MarkerClusterGroupLayerSupport(options);
 	};
 
 	// Just return a value to define the module export.
