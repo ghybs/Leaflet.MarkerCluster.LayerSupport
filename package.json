@@ -1,6 +1,6 @@
 {
   "name": "leaflet.markercluster.layersupport",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Sub-plugin for Leaflet.markercluster plugin (MCG in short); brings compatibility with L.Control.Layers and other Leaflet plugins.",
   "main": "leaflet.markercluster.layersupport-src.js",
   "directories": {
