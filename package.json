@@ -1,7 +1,7 @@
 {
   "name": "leaflet.markercluster.layersupport",
-  "version": "0.1.0",
-  "description": "Sub-plugin for Leaflet.markercluster. Brings compatibility with L.Control.Layers",
+  "version": "1.0.0",
+  "description": "Sub-plugin for Leaflet.markercluster plugin (MCG in short); brings compatibility with L.Control.Layers and other Leaflet plugins.",
   "main": "leaflet.markercluster.layersupport-src.js",
   "directories": {
     "example": "examples"
@@ -11,15 +11,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rey-awesense/Leaflet.MarkerCluster.LayerSupport.git"
+    "url": "git+https://github.com/ghybs/Leaflet.MarkerCluster.LayerSupport.git"
   },
-  "author": "https://github.com/ghybs",
+  "keywords": [
+    "leaflet",
+    "leaflet.makercluster",
+    "plugins",
+    "maps",
+    "layers",
+    "control"
+  ],
+  "author": "Boris Seang",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rey-awesense/Leaflet.MarkerCluster.LayerSupport/issues"
+    "url": "https://github.com/ghybs/Leaflet.MarkerCluster.LayerSupport/issues"
   },
-  "homepage": "https://github.com/rey-awesense/Leaflet.MarkerCluster.LayerSupport#readme",
-  "dependencies": {
+  "homepage": "https://github.com/ghybs/Leaflet.MarkerCluster.LayerSupport#readme",
+  "peerDependencies": {
     "leaflet": "~1.0.0-rc.1",
     "leaflet.markercluster": "~1.0.0-rc.1"
   }
