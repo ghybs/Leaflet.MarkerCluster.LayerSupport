@@ -471,10 +471,6 @@
 				this._map._originalAddLayer(layer);
 			}
 
-			if (this._popupContent && layer.bindPopup) {
-				layer.bindPopup(this._popupContent, this._popupOptions);
-			}
-
 			return this.fire('layeradd', {layer: layer});
 		},
 
@@ -497,10 +493,6 @@
 			}
 
 			delete this._layers[id];
-
-			if (this._popupContent) {
-				this.invoke('unbindPopup');
-			}
 
 			return this.fire('layerremove', {layer: layer});
 		},
