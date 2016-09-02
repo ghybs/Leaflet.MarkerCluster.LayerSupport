@@ -249,7 +249,7 @@
 
 		_bufferSingleAddRemove: function (layer, operationType) {
 			var duration = this.options.singleAddRemoveBufferDuration,
-				fn;
+			    fn;
 
 			if (duration > 0) {
 				this._singleAddRemoveBuffer.push({
