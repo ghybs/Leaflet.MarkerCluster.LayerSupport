@@ -32,8 +32,7 @@
 }(this, function (L, undefined) { // Does not actually expect the 'undefined' argument, it is just a trick to have an undefined variable.
 
 	var LMCG = L.MarkerClusterGroup,
-	    LMCGproto = LMCG.prototype,
-	    EVENTS = L.FeatureGroup.EVENTS;
+	    LMCGproto = LMCG.prototype;
 
 	/**
 	 * Extends the L.MarkerClusterGroup class by mainly overriding methods for
