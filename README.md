@@ -23,7 +23,8 @@ you might be interested in this more simple plugin:
 
 ## Requirements
 - Leaflet stable (0.7.x)
-- Leaflet.markercluster stable (0.4.x)
+- [Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster) plugin, stable version (0.5.x)
+- For Leaflet 1.0, use the [master branch](https://github.com/ghybs/Leaflet.MarkerCluster.LayerSupport/tree/master)
 
 
 
