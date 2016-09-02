@@ -487,9 +487,7 @@
 				layer = this._layers[layer];
 			}
 
-			if ('off' in layer) {
-				layer.off(EVENTS, this._propagateEvent, this);
-			}
+			layer.removeEventParent(this);
 
 			var id = L.stamp(layer);
 
