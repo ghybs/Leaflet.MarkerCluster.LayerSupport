@@ -11,7 +11,8 @@ provides beautiful animated Marker Clustering functionality.
 [Leaflet](http://leafletjs.com/) is the leading open-source JavaScript library
 for mobile-friendly interactive maps.
 
-Current LayerSupport version: 1.0.1
+[![GitHub releases](https://img.shields.io/github/release/ghybs/leaflet.markercluster.layersupport.svg?label=GitHub)](https://github.com/ghybs/Leaflet.MarkerCluster.LayerSupport/releases)
+[![npm](https://img.shields.io/npm/v/leaflet.markercluster.layersupport.svg)](https://www.npmjs.com/package/leaflet.markercluster.layersupport)
 
 
 **NOTE:** _if your usage requires only compatibility of MCG with
@@ -21,8 +22,8 @@ you might be interested in this more simple plugin:
 
 
 ## Requirements
-- Requires Leaflet 1.0.0-rc.3
-- [Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster) plugin, version 1.0.0-rc.1
+- Requires Leaflet 1.0.0+
+- [Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster) plugin, version 1.0.0+
 - For Leaflet 0.7.x use the [leaflet-0.7 branch](https://github.com/ghybs/Leaflet.MarkerCluster.LayerSupport/tree/leaflet-0.7)
 
 
@@ -174,6 +175,8 @@ but the checked out ones will cluster. Checked out ones will be directly added
 to the map, without clustering. What did you expect? :-)
 
 ## License
+[![license](https://img.shields.io/github/license/ghybs/leaflet.markercluster.layersupport.svg)](LICENSE)
+
 Leaflet.MarkerCluster.LayerSupport is distributed under the
 [MIT License](http://choosealicense.com/licenses/mit/) (Expat type), like
 Leaflet.markercluster.
