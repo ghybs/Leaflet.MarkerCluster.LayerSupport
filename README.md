@@ -14,6 +14,8 @@ for mobile-friendly interactive maps.
 [![GitHub releases](https://img.shields.io/github/release/ghybs/leaflet.markercluster.layersupport.svg?label=GitHub)](https://github.com/ghybs/Leaflet.MarkerCluster.LayerSupport/releases)
 [![npm](https://img.shields.io/npm/v/leaflet.markercluster.layersupport.svg)](https://www.npmjs.com/package/leaflet.markercluster.layersupport)
 
+Size: 6 kB minified, < 2 kB gzipped.
+
 
 **NOTE:** _if your usage requires only compatibility of MCG with
 [L.Control.Layers](http://leafletjs.com/reference.html#control-layers),
@@ -24,7 +26,7 @@ you might be interested in this more simple plugin:
 ## Requirements
 - Requires Leaflet 1.0.0+
 - [Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster) plugin, version 1.0.0+
-- For Leaflet 0.7.x use the [leaflet-0.7 branch](https://github.com/ghybs/Leaflet.MarkerCluster.LayerSupport/tree/leaflet-0.7)
+- For Leaflet 0.7.x use the [`v0.1.0` release](https://github.com/ghybs/Leaflet.MarkerCluster.LayerSupport/releases/tag/v0.1.0) or the [`leaflet-0.7` branch](https://github.com/ghybs/Leaflet.MarkerCluster.LayerSupport/tree/leaflet-0.7)
 
 
 ## Demos
