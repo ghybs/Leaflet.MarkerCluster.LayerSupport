@@ -30,8 +30,8 @@ you might be interested in this more simple plugin:
 
 
 ## Demos
-- [LayerSupport with standard L.Control.Layers](http://ghybs.github.io/Leaflet.MarkerCluster.LayerSupport/examples/mcgLayerSupport-controlLayers-realworld.388.html)
-- [LayerSupport with LeafletSlider plugin](http://ghybs.github.io/Leaflet.MarkerCluster.LayerSupport/examples/mcgLayerSupport-leafletslider.html)
+- [LayerSupport with standard L.Control.Layers](https://ghybs.github.io/Leaflet.MarkerCluster.LayerSupport/examples/mcgLayerSupport-controlLayers-realworld.388.html)
+- [LayerSupport with LeafletSlider plugin](https://ghybs.github.io/Leaflet.MarkerCluster.LayerSupport/examples/mcgLayerSupport-leafletslider.html)
 
 
 ## Usage instructions
