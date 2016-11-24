@@ -38,7 +38,7 @@ you might be interested in this more simple plugin:
 **HTML:**
 ```html
 <!-- After Leaflet and Leaflet.markercluster scripts -->
-<script src="leaflet.markercluster.layersupport-src.js"></script>
+<script src="leaflet.markercluster.layersupport.js"></script>
 ```
 
 **JavaScript:**
