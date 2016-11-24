@@ -62,17 +62,16 @@ with any plugin that adds to / removes markers from map (e.g. [LeafletSlider](ht
 ### Installing the sub-plugin
 
 #### Local copy
-1. <a class="test" href="https://raw.githubusercontent.com/ghybs/Leaflet.MarkerCluster.LayerSupport/master/leaflet.markercluster.layersupport-src.js" download="leaflet.markercluster.layersupport-src.js" target="_blank">Download</a> the "leaflet.markercluster.layersupport-src.js" file (right click on the link and "Save Link As…").
+1. Download the "<a href="https://github.com/ghybs/Leaflet.MarkerCluster.LayerSupport/releases/download/v1.0.2/leaflet.markercluster.layersupport.js">`leaflet.markercluster.layersupport.js`</a>" file from the [`v1.0.2` release](https://github.com/ghybs/Leaflet.MarkerCluster.LayerSupport/releases/tag/v1.0.2).
 2. Place the file alongside your page.
-3. Add the `script` tag (see [Quick Guide > HTML](#quick-guide)) to your page after
-Leaflet and Leaflet.markercluster scripts.
+3. Add the `script` tag (see [Quick Guide > HTML](#quick-guide)) to your page after Leaflet and Leaflet.markercluster scripts.
 
 #### CDN
-You can alternatively use the free [RawGit](https://rawgit.com/) CDN service, but keep in mind that there are [no uptime or support guarantees](https://rawgit.com/faq#no-uptime-guarantee).
+You can alternatively use the free [unpkg](https://unpkg.com) CDN service, but keep in mind that it "[_is a free, best-effort service and cannot provide any uptime or support guarantees_](https://unpkg.com/#/about)".
 
 ```html
 <!-- After Leaflet and Leaflet.markercluster scripts -->
-<script src="https://cdn.rawgit.com/ghybs/Leaflet.MarkerCluster.LayerSupport/3d4c4f24a008d6983a8f98b1c823f9a05ad62f80/leaflet.markercluster.layersupport-src.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster.layersupport@1.0.2/dist/leaflet.markercluster.layersupport.js"></script>
 ```
 
 
