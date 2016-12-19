@@ -175,7 +175,7 @@ L.MarkerClusterGroup.LayerSupport = L.MarkerClusterGroup.extend({
 			id, group, i;
 
 		// Normal MCG onAdd.
-		L.MarkerClusterGroup.prototype.onAdd.call(this, map);
+		this._originalOnAdd.call(this, map);
 
 		// If layer Groups are added/removed from this group while it is not
 		// on map, Control.Layers gets out of sync until this is added back.
@@ -200,6 +200,7 @@ L.MarkerClusterGroup.LayerSupport = L.MarkerClusterGroup.extend({
 			map.addLayer(toBeReAdded[i]);
 		}
 	},
+	_originalOnAdd: L.MarkerClusterGroup.prototype.onAdd,
 
 	// Do not restore the original map methods when removing the group from it.
 	// Leaving them as-is does not harm, whereas restoring the original ones
