@@ -9,10 +9,6 @@ var LMCG = L.MarkerClusterGroup,
  */
 var MarkerClusterGroupLayerSupport = LMCG.extend({
 
-	statics: {
-		version: '1.0.1'
-	},
-
 	options: {
 		// Buffer single addLayer and removeLayer requests for efficiency.
 		singleAddRemoveBufferDuration: 100 // in ms.
