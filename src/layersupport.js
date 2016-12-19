@@ -1,13 +1,10 @@
-var LMCG = L.MarkerClusterGroup,
-	LMCGproto = LMCG.prototype;
-
 /**
  * Extends the L.MarkerClusterGroup class by mainly overriding methods for
  * addition/removal of layers, so that they can also be directly added/removed
  * from the map later on while still clustering in this group.
  * @type {L.MarkerClusterGroup}
  */
-var MarkerClusterGroupLayerSupport = LMCG.extend({
+L.MarkerClusterGroup.LayerSupport = L.MarkerClusterGroup.extend({
 
 	options: {
 		// Buffer single addLayer and removeLayer requests for efficiency.
@@ -15,7 +12,7 @@ var MarkerClusterGroupLayerSupport = LMCG.extend({
 	},
 
 	initialize: function (options) {
-		LMCGproto.initialize.call(this, options);
+		L.MarkerClusterGroup.prototype.initialize.call(this, options);
 
 		// Replace the MCG internal featureGroup's so that they directly
 		// access the map add/removal methods, bypassing the switch agent.
@@ -38,7 +35,7 @@ var MarkerClusterGroupLayerSupport = LMCG.extend({
 	 * Stamps the passed layers as being part of this group, but without adding
 	 * them to the map right now.
 	 * @param layers L.Layer|Array(L.Layer) layer(s) to be stamped.
-	 * @returns {MarkerClusterGroupLayerSupport} this.
+	 * @returns {L.MarkerClusterGroup.LayerSupport} this.
 	 */
 	checkIn: function (layers) {
 		var layersArray = this._toArray(layers);
@@ -52,7 +49,7 @@ var MarkerClusterGroupLayerSupport = LMCG.extend({
 	 * Un-stamps the passed layers from being part of this group. It has to
 	 * remove them from map (if they are) since they will no longer cluster.
 	 * @param layers L.Layer|Array(L.Layer) layer(s) to be un-stamped.
-	 * @returns {MarkerClusterGroupLayerSupport} this.
+	 * @returns {L.MarkerClusterGroup.LayerSupport} this.
 	 */
 	checkOut: function (layers) {
 		var layersArray = this._toArray(layers),
@@ -90,7 +87,7 @@ var MarkerClusterGroupLayerSupport = LMCG.extend({
 	 * Checks in and adds an array of layers to this group.
 	 * Layer Groups are also added to the map to fire their event.
 	 * @param layers (L.Layer|L.Layer[]) single and/or group layers to be added.
-	 * @returns {MarkerClusterGroupLayerSupport} this.
+	 * @returns {L.MarkerClusterGroup.LayerSupport} this.
 	 */
 	addLayers: function (layers) {
 		var layersArray = this._toArray(layers),
@@ -117,14 +114,14 @@ var MarkerClusterGroupLayerSupport = LMCG.extend({
 		this._bufferSingleAddRemove(layer, "addLayers");
 		return this;
 	},
-	_originalAddLayer: LMCGproto.addLayer,
-	_originalAddLayers: LMCGproto.addLayers,
+	_originalAddLayer: L.MarkerClusterGroup.prototype.addLayer,
+	_originalAddLayers: L.MarkerClusterGroup.prototype.addLayers,
 
 	/**
 	 * Removes layers from this group but without check out.
 	 * Layer Groups are also removed from the map to fire their event.
 	 * @param layers (L.Layer|L.Layer[]) single and/or group layers to be removed.
-	 * @returns {MarkerClusterGroupLayerSupport} this.
+	 * @returns {L.MarkerClusterGroup.LayerSupport} this.
 	 */
 	removeLayers: function (layers) {
 		var layersArray = this._toArray(layers),
@@ -159,8 +156,8 @@ var MarkerClusterGroupLayerSupport = LMCG.extend({
 		this._bufferSingleAddRemove(layer, "removeLayers");
 		return this;
 	},
-	_originalRemoveLayer: LMCGproto.removeLayer,
-	_originalRemoveLayers: LMCGproto.removeLayers,
+	_originalRemoveLayer: L.MarkerClusterGroup.prototype.removeLayer,
+	_originalRemoveLayers: L.MarkerClusterGroup.prototype.removeLayers,
 
 	onAdd: function (map) {
 		// Replace the map addLayer and removeLayer methods to place the
@@ -178,7 +175,7 @@ var MarkerClusterGroupLayerSupport = LMCG.extend({
 			id, group, i;
 
 		// Normal MCG onAdd.
-		LMCGproto.onAdd.call(this, map);
+		L.MarkerClusterGroup.prototype.onAdd.call(this, map);
 
 		// If layer Groups are added/removed from this group while it is not
 		// on map, Control.Layers gets out of sync until this is added back.
@@ -539,5 +536,5 @@ var _layerSwitchMap = {
 
 // Supply with a factory for consistency with Leaflet.
 L.markerClusterGroup.layerSupport = function (options) {
-	return new MarkerClusterGroupLayerSupport(options);
+	return new L.MarkerClusterGroup.LayerSupport(options);
 };
