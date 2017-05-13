@@ -86,17 +86,18 @@ You can alternatively use the free [unpkg](https://unpkg.com) CDN service, but k
 
 #### npm
 1. Add this package to your project:
-```bash
-$ npm install leaflet.markercluster.layersupport --save
-```
+    ```bash
+    $ npm install leaflet.markercluster.layersupport --save
+    ```
+
 2. If you are using a bundling tool, import in your JavaScript.
 It only performs the side effect of attaching to the global `L` namespace,
 so you do not need to store it into a local variable or import a namespace.
-```javascript
-require('leaflet.markercluster.layersupport');
-// Or with ES6:
-import 'leaflet.markercluster.layersupport';
-```
+    ```javascript
+    require('leaflet.markercluster.layersupport');
+    // Or with ES6:
+    import 'leaflet.markercluster.layersupport';
+    ```
 
 
 ### Creation
