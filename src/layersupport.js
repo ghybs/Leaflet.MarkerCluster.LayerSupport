@@ -505,10 +505,12 @@ var _proxyLayerGroup = {
 		return this;
 	},
 
+	// Make sure it uses addLayers when added to map.
 	onAdd: function () {
 		this._proxyMcgLayerSupportGroup.addLayers(this.getLayers());
 	},
 
+	// Make sure it uses removeLayers when removed from map.
 	onRemove: function () {
 		this._proxyMcgLayerSupportGroup.removeLayers(this.getLayers());
 	}
