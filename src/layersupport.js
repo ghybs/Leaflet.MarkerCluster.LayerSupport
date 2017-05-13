@@ -53,13 +53,13 @@ L.MarkerClusterGroup.LayerSupport = L.MarkerClusterGroup.extend({
 	 */
 	checkOut: function (layers) {
 		var layersArray = this._toArray(layers),
-			separated = this._separateSingleFromGroupLayers(layersArray, {
-				groups: [],
-				singles: []
-			}),
-			groups = separated.groups,
-			singles = separated.singles,
-			i, layer;
+		    separated = this._separateSingleFromGroupLayers(layersArray, {
+		        groups: [],
+		        singles: []
+		    }),
+		    groups = separated.groups,
+		    singles = separated.singles,
+		    i, layer;
 
 		// Un-stamp single layers.
 		for (i = 0; i < singles.length; i++) {
@@ -91,9 +91,9 @@ L.MarkerClusterGroup.LayerSupport = L.MarkerClusterGroup.extend({
 	 */
 	addLayers: function (layers) {
 		var layersArray = this._toArray(layers),
-			separated = this._checkInGetSeparated(layersArray),
-			groups = separated.groups,
-			i, group, id;
+		    separated = this._checkInGetSeparated(layersArray),
+		    groups = separated.groups,
+		    i, group, id;
 
 		// Batch add all single layers.
 		this._originalAddLayers(separated.singles);
@@ -125,14 +125,14 @@ L.MarkerClusterGroup.LayerSupport = L.MarkerClusterGroup.extend({
 	 */
 	removeLayers: function (layers) {
 		var layersArray = this._toArray(layers),
-			separated = this._separateSingleFromGroupLayers(layersArray, {
-				groups: [],
-				singles: []
-			}),
-			groups = separated.groups,
-			singles = separated.singles,
-			i = 0,
-			group, id;
+		    separated = this._separateSingleFromGroupLayers(layersArray, {
+		        groups: [],
+		        singles: []
+		    }),
+		    groups = separated.groups,
+		    singles = separated.singles,
+		    i = 0,
+		    group, id;
 
 		// Batch remove single layers from MCG.
 		this._originalRemoveLayers(singles);
@@ -172,7 +172,7 @@ L.MarkerClusterGroup.LayerSupport = L.MarkerClusterGroup.extend({
 		// (if it was never added to map before). Therefore we need to
 		// remove all checked in layers from map!
 		var toBeReAdded = this._removePreAddedLayers(map),
-			id, group, i;
+		    id, group, i;
 
 		// Normal MCG onAdd.
 		this._originalOnAdd.call(this, map);
@@ -209,7 +209,7 @@ L.MarkerClusterGroup.LayerSupport = L.MarkerClusterGroup.extend({
 
 	_bufferSingleAddRemove: function (layer, operationType) {
 		var duration = this.options.singleAddRemoveBufferDuration,
-			fn;
+		    fn;
 
 		if (duration > 0) {
 			this._singleAddRemoveBuffer.push({
@@ -230,10 +230,10 @@ L.MarkerClusterGroup.LayerSupport = L.MarkerClusterGroup.extend({
 		// For now, simply cut the processes at each operation change
 		// (addLayers, removeLayers).
 		var singleAddRemoveBuffer = this._singleAddRemoveBuffer,
-			i = 0,
-			layersBuffer = [],
-			currentOperation,
-			currentOperationType;
+		    i = 0,
+		    layersBuffer = [],
+		    currentOperation,
+		    currentOperationType;
 
 		for (; i < singleAddRemoveBuffer.length; i++) {
 			currentOperation = singleAddRemoveBuffer[i];
@@ -255,12 +255,12 @@ L.MarkerClusterGroup.LayerSupport = L.MarkerClusterGroup.extend({
 
 	_checkInGetSeparated: function (layersArray) {
 		var separated = this._separateSingleFromGroupLayers(layersArray, {
-				groups: [],
-				singles: []
-			}),
-			groups = separated.groups,
-			singles = separated.singles,
-			i, layer;
+		        groups: [],
+		        singles: []
+		    }),
+		    groups = separated.groups,
+		    singles = separated.singles,
+		    i, layer;
 
 		// Recruit Layer Groups.
 		// If they do not already belong to this group, they will be
@@ -286,9 +286,9 @@ L.MarkerClusterGroup.LayerSupport = L.MarkerClusterGroup.extend({
 
 	_separateSingleFromGroupLayers: function (inputLayers, output) {
 		var groups = output.groups,
-			singles = output.singles,
-			isArray = L.Util.isArray,
-			layer;
+		    singles = output.singles,
+		    isArray = L.Util.isArray,
+		    layer;
 
 		for (var i = 0; i < inputLayers.length; i++) {
 			layer = inputLayers[i];
@@ -385,8 +385,8 @@ L.MarkerClusterGroup.LayerSupport = L.MarkerClusterGroup.extend({
 	// In case checked in layers have been added to map whereas map is not redirected.
 	_removePreAddedLayers: function (map) {
 		var layers = this._layers,
-			toBeReAdded = [],
-			layer;
+		    toBeReAdded = [],
+		    layer;
 
 		for (var id in layers) {
 			layer = layers[id];
