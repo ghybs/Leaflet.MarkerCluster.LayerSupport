@@ -71,7 +71,7 @@ with any plugin that adds to / removes markers from map (e.g. [LeafletSlider](ht
 ### Installing the sub-plugin
 
 #### Local copy
-1. Download the "<a href="https://github.com/ghybs/Leaflet.MarkerCluster.LayerSupport/releases/download/v1.0.3/leaflet.markercluster.layersupport.js">`leaflet.markercluster.layersupport.js`</a>" file from the [`v1.0.3` release](https://github.com/ghybs/Leaflet.MarkerCluster.LayerSupport/releases/tag/v1.0.3).
+1. Download the "<a href="https://github.com/ghybs/Leaflet.MarkerCluster.LayerSupport/releases/download/v1.0.4/leaflet.markercluster.layersupport.js">`leaflet.markercluster.layersupport.js`</a>" file from the [`v1.0.4` release](https://github.com/ghybs/Leaflet.MarkerCluster.LayerSupport/releases/tag/v1.0.4).
 2. Place the file alongside your page.
 3. Add the `script` tag (see [Quick Guide > HTML](#quick-guide)) to your page after Leaflet and Leaflet.markercluster scripts.
 
@@ -81,7 +81,7 @@ You can alternatively use the free [unpkg](https://unpkg.com) CDN service, but k
 
 ```html
 <!-- After Leaflet and Leaflet.markercluster scripts -->
-<script src="https://unpkg.com/leaflet.markercluster.layersupport@1.0.3/dist/leaflet.markercluster.layersupport.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster.layersupport@1.0.4/dist/leaflet.markercluster.layersupport.js"></script>
 ```
 
 #### npm
