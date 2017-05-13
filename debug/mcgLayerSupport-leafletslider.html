@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="screen.css" />
+    <link rel="stylesheet" href="../docs/examples/screen.css" />
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.Default.css" />
@@ -54,7 +54,7 @@
 
 
     //Fetch some data from a GeoJSON file
-    $.getJSON("points.json", function(json) {
+    $.getJSON("../docs/examples/points.json", function(json) {
 
         var testlayer = L.geoJson(json);
 
