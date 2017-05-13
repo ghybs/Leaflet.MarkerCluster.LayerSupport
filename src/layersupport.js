@@ -503,6 +503,14 @@ var _proxyLayerGroup = {
 		delete this._layers[id];
 
 		return this;
+	},
+
+	onAdd: function () {
+		this._proxyMcgLayerSupportGroup.addLayers(this.getLayers());
+	},
+
+	onRemove: function () {
+		this._proxyMcgLayerSupportGroup.removeLayers(this.getLayers());
 	}
 
 };
