@@ -80,7 +80,7 @@ exports.build = function (callback, metaData, compsBase32, buildName) {
         filenamePart = PLUGIN_FILE_NAME + (buildName ? "-" + buildName : ""),
         pathPart = "dist/",
         srcFilename = filenamePart + "-src.js",
-        mapFilename = filenamePart + "-src.map",
+        mapFilename = filenamePart + "-src.js.map",
         srcPath = pathPart + srcFilename,
         mapPath = pathPart + mapFilename,
 
