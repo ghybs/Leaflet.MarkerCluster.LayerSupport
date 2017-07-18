@@ -244,6 +244,7 @@ L.MarkerClusterGroup.LayerSupport = L.MarkerClusterGroup.extend({
 				layersBuffer.push(currentOperation.layer);
 			} else {
 				this[currentOperationType](layersBuffer);
+				currentOperationType = currentOperation.type;
 				layersBuffer = [currentOperation.layer];
 			}
 		}
