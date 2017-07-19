@@ -13,7 +13,8 @@
   },
   "scripts": {
     "build": "jake build",
-    "version": "npm run build && jake buildDocs && git add README.md",
+    "docs": "jake buildDocs",
+    "version": "npm run build && npm run docs && git add README.md",
     "postversion": "npm run build",
     "prepublish": "npm run build"
   },
