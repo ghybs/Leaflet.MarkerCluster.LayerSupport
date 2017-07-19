@@ -4,6 +4,7 @@
 ## 1.0.5 (2017-07-19) for Leaflet 1.x
 
 - Fix throttling different operation types (i.e. mixed `addLayer` and `removeLayer`) [#10](https://github.com/ghybs/Leaflet.MarkerCluster.LayerSupport/pull/10) (by [AsamK](https://github.com/AsamK))
+- Docs: update debug and demo pages to Leaflet 1.1.0 and Leaflet.markercluster 1.0.6.
 
 
 ## 1.0.4 (2017-05-13) for Leaflet 1.0
