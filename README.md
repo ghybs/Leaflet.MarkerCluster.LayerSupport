@@ -147,7 +147,7 @@ the Control, markers will automatically cluster / be removed.
 ### Options
 | Option  | Type  | Default | Description |
 | :------ | :-----| :------ | :---------- |
-| **singleAddRemoveBufferDuration** | `Number` | `100` | Gathers all calls to `addLayer` and `removeLayer` single operations that happen during the specified duration (in ms) for batch processing. |
+| **singleAddRemoveBufferDuration** | `Number` | `100` | Gathers all calls to `addLayer` and `removeLayer` single operations (on this MCG) that happen during the specified duration (in ms) for batch processing. Similar to throttling with execution on trailing edge only. Use `0` to disable throttling. |
 
 
 ### Methods
