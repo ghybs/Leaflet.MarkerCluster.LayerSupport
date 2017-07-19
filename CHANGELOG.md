@@ -1,6 +1,11 @@
 # Leaflet.MarkerCluster.LayerSupport Changelog
 
 
+## 1.0.5 (2017-07-19) for Leaflet 1.x
+
+- Fix throttling different operation types (i.e. mixed `addLayer` and `removeLayer`) [#10](https://github.com/ghybs/Leaflet.MarkerCluster.LayerSupport/pull/10) (by [AsamK](https://github.com/AsamK))
+
+
 ## 1.0.4 (2017-05-13) for Leaflet 1.0
 
 - Fix use of `addLayers`, `removeLayers` and therefore `chunkedLoading` option ([#8](https://github.com/ghybs/Leaflet.MarkerCluster.LayerSupport/issues/8)).
@@ -35,3 +40,5 @@ Compatible with Leaflet 0.7.x and Leaflet.markercluster 0.5.x.
 ## 1.0.0 (2016-06-25) for Leaflet 1.0
 
 First release
+
+- Compatibility with Leaflet 1.0 [#4](https://github.com/ghybs/Leaflet.MarkerCluster.LayerSupport/pull/4) (by [rey-awesense](https://github.com/rey-awesense))
