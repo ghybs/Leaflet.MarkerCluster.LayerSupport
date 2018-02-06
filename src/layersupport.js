@@ -8,7 +8,7 @@ L.MarkerClusterGroup.LayerSupport = L.MarkerClusterGroup.extend({
 
 	options: {
 		// Buffer single addLayer and removeLayer requests for efficiency.
-		singleAddRemoveBufferDuration: 100 // in ms.
+		singleAddRemoveBufferDuration: 0 // in ms.
 	},
 
 	initialize: function (options) {
