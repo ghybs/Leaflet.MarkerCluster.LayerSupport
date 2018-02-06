@@ -335,6 +335,10 @@ L.MarkerClusterGroup.LayerSupport = L.MarkerClusterGroup.extend({
 			layerGroup._originalAddLayer || layerGroup.addLayer;
 		layerGroup._originalRemoveLayer =
 			layerGroup._originalRemoveLayer || layerGroup.removeLayer;
+		layerGroup._originalOnAdd =
+				layerGroup._originalOnAdd || layerGroup.onAdd;
+		layerGroup._originalOnRemove =
+				layerGroup._originalOnRemove || layerGroup.onRemove;
 		L.extend(layerGroup, _proxyLayerGroup);
 	},
 
@@ -350,6 +354,8 @@ L.MarkerClusterGroup.LayerSupport = L.MarkerClusterGroup.extend({
 		delete layerGroup._proxyMcgLayerSupportGroup;
 		layerGroup.addLayer = layerGroup._originalAddLayer;
 		layerGroup.removeLayer = layerGroup._originalRemoveLayer;
+		layerGroup.onAdd = layerGroup._originalOnAdd;
+		layerGroup.onRemove = layerGroup._originalOnRemove;
 
 		var id = L.stamp(layerGroup);
 		delete this._proxyLayerGroups[id];
