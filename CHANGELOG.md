@@ -1,6 +1,14 @@
 # Leaflet.MarkerCluster.LayerSupport Changelog
 
 
+## 2.0.0 (2018-02-06) for Leaflet 1.x
+
+- **Breaking change:** `singleAddRemoveBufferDuration` option now defaults to `0`
+(i.e. it is disabled) instead of `100` ms previously.
+Fix this plugin breaking `marker.setLatLng()` ([#11](https://github.com/ghybs/Leaflet.MarkerCluster.LayerSupport/issues/11))
+and making `addLayer` unexpectedly asynchronous ([#12](https://github.com/ghybs/Leaflet.MarkerCluster.LayerSupport/issues/12)).
+
+
 ## 1.0.5 (2017-07-19) for Leaflet 1.x
 
 - Fix throttling different operation types (i.e. mixed `addLayer` and `removeLayer`) [#10](https://github.com/ghybs/Leaflet.MarkerCluster.LayerSupport/pull/10) (by [AsamK](https://github.com/AsamK))
