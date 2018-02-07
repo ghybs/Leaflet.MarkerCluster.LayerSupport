@@ -14,6 +14,11 @@
     libs.push(global.libLeafletMarkerClusterVersions);
   }
 
+  // In case extra libraries must be loaded as well.
+  if (global.extraLibs) {
+    libs = libs.concat(global.extraLibs);
+  }
+
   // Plugin library.
   libs.push({
     name: 'leaflet.markercluster.layersupport',
