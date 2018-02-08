@@ -33,6 +33,10 @@
 		versions: [
 			// You can use https://www.srihash.org/ to generate the SRI hash.
 			_makeMcgLayerSupportVersionAssets({
+				name: '2.0.1',
+				sriSrcJs: ''
+			}),
+			_makeMcgLayerSupportVersionAssets({
 				name: '2.0.0',
 				sriSrcJs: 'sha384-1zk5CWpEe6wZLfNMx9dtQ6ufOPIFuIo81+o70mPeSn0zB7PHJ75320/oqaJzTnA2'
 			}),
