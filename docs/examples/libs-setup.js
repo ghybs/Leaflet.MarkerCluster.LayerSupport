@@ -34,40 +34,40 @@
 			// You can use https://www.srihash.org/ to generate the SRI hash.
 			_makeMcgLayerSupportVersionAssets({
 				name: '2.0.0',
-				sriSrcJs: ''
+				sriSrcJs: 'sha384-1zk5CWpEe6wZLfNMx9dtQ6ufOPIFuIo81+o70mPeSn0zB7PHJ75320/oqaJzTnA2'
 			}),
 			_makeMcgLayerSupportVersionAssets({
 				name: '1.0.5',
-				sriSrcJs: ''
+				sriSrcJs: 'sha384-sxLYF/ic9xXT5JwaC4gIYVb1dvZv0X/UkNG/reTbFa4BhDc565gmpCYTvel3NAbH'
 			}),
 			_makeMcgLayerSupportVersionAssets({
 				name: '1.0.4',
-				sriSrcJs: ''
+				sriSrcJs: 'sha384-p6ZmgKEMi5Arp0HP2SHHPv6dLy7xGEOZ/lTs2d7zJ+bMhSXkSL2NiZ9HmR0o7vDT'
 			}),
 			_makeMcgLayerSupportVersionAssets({
 				name: '1.0.3',
-				sriSrcJs: ''
+				sriSrcJs: 'sha384-6TYuwjUDu5TULfMVo3zDBoq4A1M6mf2c5B3Vx0M021U5XBo5X1yRCiPhEd6ehLzP'
 			}),
 			_makeMcgLayerSupportVersionAssets({
 				name: '1.0.2',
-				sriSrcJs: ''
+				sriSrcJs: 'sha384-JSr6sT8nWUA5N+x4mJSl06cJYrp6sBctdejUY4rvNqoZrYFgMwIV2WNtkV4xqEJ9'
 			}),
 			// Versions 1.0.1, 1.0.0 and 0.1.0 are not published on npm, hence not available on unpkg CDN.
 			// Use jsDelivr instead.
 			_makeMcgLayerSupportVersionAssets({
 				name: '1.0.1',
 				cdnPrefix: mcgLayerSupportPathPrefix2,
-				sriSrcJs: ''
+				sriSrcJs: 'sha384-FJQaGQXnYuu1OYarmQPkxN0Pch59iBfuBJ0mTJ5pywqpygf7LAZTxfLlsUTNCzrt'
 			}),
 			_makeMcgLayerSupportVersionAssets({
 				name: '1.0.0',
 				cdnPrefix: mcgLayerSupportPathPrefix2,
-				sriSrcJs: ''
+				sriSrcJs: 'sha384-E+VopqhMO9iCgY5xNiU3awtEQfpaQw/+zwNTatVuEU3JATG71xaJK+pPz7zi5TO0'
 			}),
 			_makeMcgLayerSupportVersionAssets({
 				name: '0.1.0',
 				cdnPrefix: mcgLayerSupportPathPrefix2,
-				sriSrcJs: ''
+				sriSrcJs: 'sha384-Rr21NL2cibg9oFjKh99jXONofUFrSaCImut77LwsQU0TpepBBkeetsKGdSUyTg/X'
 			}),
 			{
 				name: 'local',
