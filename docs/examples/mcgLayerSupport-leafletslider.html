@@ -33,7 +33,6 @@
 </p>
 <p>Note: most other Leaflet plugins should also be compatible with MCG Layer Support.</p>
 
-
 <table class="buttonsTable">
     <tr>
         <th>Leaflet</th>
@@ -42,24 +41,9 @@
         <th>LeafletSlider</th>
     </tr>
     <tr>
-        <td>
-            <!-- https://github.com/ghybs/manage-libs-versions -->
-            <div
-                    data-manage-lib="leaflet"
-                    data-manage-versions="master, 1.3.1, 1.3.0, 1.2.0, 1.1.0, 1.0.3, 1.0.2, 1.0.1, 1.0.0"
-            ></div>
-        </td>
-        <td>
-            <div
-                    data-manage-lib="leaflet.markercluster"
-                    data-manage-versions="1.3.0, 1.2.0, 1.1.0, 1.0.6, 1.0.5, 1.0.4, 1.0.3, 1.0.2, 1.0.1, 1.0.0"
-            ></div>
-        <td>
-            <div
-                    data-manage-lib="leaflet.markercluster.layersupport"
-                    data-manage-versions="local, 2.0.0, 1.0.5, 1.0.4, 1.0.3, 1.0.2"
-            ></div>
-        </td>
+        <td id="leaflet1"></td>
+        <td id="mcg1"></td>
+        <td id="layersupport1"></td>
         <td rowspan="2">
             <div
                     data-manage-lib="leafletslider"
@@ -76,32 +60,14 @@
         </td>
     </tr>
     <tr>
-        <td>
-            <div
-                    data-manage-lib="leaflet"
-                    data-manage-versions="0.7.7"
-            ></div>
-        </td>
-        <td>
-            <div
-                    data-manage-lib="leaflet.markercluster"
-                    data-manage-versions="0.5.0"
-            ></div>
-        </td>
-        <td>
-            <span class="italic">(version 0.1.0 not available on CDN)</span>
-        </td>
+        <td id="leaflet0"></td>
+        <td id="mcg0"></td>
+        <td id="layersupport0"></td>
         <!-- td "eaten" by above rowspan -->
     </tr>
 </table>
 
-<br />
-
-<button id="reload">Reload with the above versions</button>
-
-<br />
-
-<p>Note: local version is available only in local development and if dist files have been built.</p>
+<div id="reloadButton"></div>
 
 
 <script src="https://unpkg.com/urijs@^1/src/URI.min.js"></script>
