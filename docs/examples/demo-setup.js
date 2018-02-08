@@ -6,13 +6,122 @@
  */
 (function (global) {
 
+	////////////////////////////////////////////////////////
+	// Fill HTML versions selection table first.
+	////////////////////////////////////////////////////////
+
+	// Build the table if placeholder is found.
+	var versionsSelectionTable = document.getElementById('versionsSelectionTable');
+
+	if (versionsSelectionTable) {
+		versionsSelectionTable.innerHTML =
+				'<table class="buttonsTable">\n' +
+				'\t<tr>\n' +
+				'\t\t<th>Leaflet</th>\n' +
+				'\t\t<th>Leaflet.markercluster</th>\n' +
+				'\t\t<th>Leaflet.MarkerCluster.LayerSupport</th>\n' +
+				'\t</tr>\n' +
+				'\t<tr>\n' +
+				'\t\t<td id="leaflet1"></td>\n' +
+				'\t\t<td id="mcg1"></td>\n' +
+				'\t\t<td id="layersupport1"></td>\n' +
+				'\t</tr>\n' +
+				'\t<tr>\n' +
+				'\t\t<td id="leaflet0"></td>\n' +
+				'\t\t<td id="mcg0"></td>\n' +
+				'\t\t<td id="layersupport0"></td>\n' +
+				'\t</tr>\n' +
+				'</table>';
+	}
+
+	// Fill the cells if placeholders are found.
+	var selectionCellIds = ['leaflet1', 'mcg1', 'layersupport1', 'leaflet0', 'mcg0', 'layersupport0'];
+
+	selectionCellIds.forEach(_fillVersionSelectionCell);
+
+	// Add the reload button if placeholder is found.
+	var reloadButton = document.getElementById('reloadButton');
+
+	if (reloadButton) {
+		reloadButton.innerHTML =
+				'<br />\n' +
+				'\n' +
+				'<button id="reload">Reload with the above versions</button>\n' +
+				'\n' +
+				'<br />\n' +
+				'\n' +
+				'<p>Note: local version is available only in local development and if dist files have been built.</p>';
+	}
+
+
+	function _fillVersionSelectionCell(cellId) {
+		var cell = document.getElementById(cellId);
+
+		if (cell) {
+			switch (cellId) {
+				case 'leaflet1':
+					// For syntax, see https://github.com/ghybs/manage-libs-versions
+					cell.innerHTML =
+							'\t\t\t<div\n' +
+							'\t\t\t\t\tdata-manage-lib="leaflet"\n' +
+							'\t\t\t\t\tdata-manage-versions="master, 1.3.1, 1.3.0, 1.2.0, 1.1.0, 1.0.3, 1.0.2, 1.0.1, 1.0.0"\n' +
+							'\t\t\t></div>\n\t\t';
+					break;
+				case 'mcg1':
+					cell.innerHTML =
+							'\t\t\t<div\n' +
+							'\t\t\t\t\tdata-manage-lib="leaflet.markercluster"\n' +
+							'\t\t\t\t\tdata-manage-versions="1.3.0, 1.2.0, 1.1.0, 1.0.6, 1.0.5, 1.0.4, 1.0.3, 1.0.2, 1.0.1, 1.0.0"\n' +
+							'\t\t\t></div>\n\t\t';
+					break;
+				case 'layersupport1':
+					cell.innerHTML =
+							'\t\t\t<div\n' +
+							'\t\t\t\t\tdata-manage-lib="leaflet.markercluster.layersupport"\n' +
+							'\t\t\t\t\tdata-manage-versions="local, 2.0.0, 1.0.5, 1.0.4, 1.0.3, 1.0.2, 1.0.1, 1.0.0"\n' +
+							'\t\t\t></div>\n\t\t';
+					break;
+				case 'leaflet0':
+					cell.innerHTML =
+							'\t\t\t<div\n' +
+							'\t\t\t\t\tdata-manage-lib="leaflet"\n' +
+							'\t\t\t\t\tdata-manage-versions="0.7.7"\n' +
+							'\t\t\t></div>\n\t\t';
+					break;
+				case 'mcg0':
+					cell.innerHTML =
+							'\t\t\t<div\n' +
+							'\t\t\t\t\tdata-manage-lib="leaflet.markercluster"\n' +
+							'\t\t\t\t\tdata-manage-versions="0.5.0"\n' +
+							'\t\t\t></div>\n\t\t';
+					break;
+				case 'layersupport0':
+					cell.innerHTML =
+							'\t\t\t<div\n' +
+							'\t\t\t\t\tdata-manage-lib="leaflet.markercluster.layersupport"\n' +
+							'\t\t\t\t\tdata-manage-versions="0.1.0"\n' +
+							'\t\t\t></div>\n\t\t';
+					break;
+				default:
+					console.log('Unknown cell identifier: ' + cellId);
+			}
+		} else {
+			console.log('Could not find Version Selection Cell with id: ' + cellId);
+		}
+	}
+
+
+	////////////////////////////////////////////////////////
+	// Now use manage-libs-versions.
+	////////////////////////////////////////////////////////
+
 	var bundle1 = global.bundle1;
 
 	bundle1.fillPlaceholders();
 
-// Check for availability of local version.
-// It is absent from repository, therefore in online mode.
-// In development mode, it is available if developer has built the dist file(s).
+	// Check for availability of local version.
+	// It is absent from repository, therefore in online mode.
+	// In development mode, it is available if developer has built the dist file(s).
 	var localVersion = bundle1.getLibVersion('leaflet.markercluster.layersupport', 'local');
 
 	if (localVersion) {
@@ -65,7 +174,7 @@
 	}
 
 
-////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////
 	document.getElementById('reload').addEventListener('click', function (event) {
 		event.preventDefault();
 
