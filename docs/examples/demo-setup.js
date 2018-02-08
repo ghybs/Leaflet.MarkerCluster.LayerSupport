@@ -78,7 +78,7 @@
 					cell.innerHTML =
 							'\t\t\t<div\n' +
 							'\t\t\t\t\tdata-manage-lib="leaflet.markercluster.layersupport"\n' +
-							'\t\t\t\t\tdata-manage-versions="local, 2.0.0, 1.0.5, 1.0.4, 1.0.3, 1.0.2, 1.0.1, 1.0.0"\n' +
+							'\t\t\t\t\tdata-manage-versions="local, 2.0.1, 2.0.0, 1.0.5, 1.0.4, 1.0.3, 1.0.2, 1.0.1, 1.0.0"\n' +
 							'\t\t\t></div>\n\t\t';
 					break;
 				case 'leaflet0':
@@ -131,10 +131,10 @@
 					load();
 				})
 				.catch(function () {
-					var version200 = bundle1.getLibVersion('leaflet.markercluster.layersupport', '2.0.0');
+					var versionLatest = bundle1.getLibVersion('leaflet.markercluster.layersupport', '2.0.1');
 
-					if (version200) {
-						version200.defaultVersion = true;
+					if (versionLatest) {
+						versionLatest.defaultVersion = true;
 					}
 
 					load();
