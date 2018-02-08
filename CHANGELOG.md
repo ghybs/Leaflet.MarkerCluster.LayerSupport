@@ -1,6 +1,11 @@
 # Leaflet.MarkerCluster.LayerSupport Changelog
 
 
+## 2.0.1 (2018-02-08) for Leaflet 1.x
+
+- Fix `checkOut` not properly cleaning Layer Groups ([#14](https://github.com/ghybs/Leaflet.MarkerCluster.LayerSupport/issues/14)).
+
+
 ## 2.0.0 (2018-02-06) for Leaflet 1.x
 
 - **Breaking change:** `singleAddRemoveBufferDuration` option now defaults to `0`
